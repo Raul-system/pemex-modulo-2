@@ -1,36 +1,5 @@
-Campos del Formulario de Registro de Vacante:
-"remitente"
-"destinatario"
-"asunto"
-"oficio"
-"fecha"
-"numero"
-"numero_expediente"
-"antecendentes_registro"
-"Numeros"
-"num_unico_expediente"
-"fechas"
-"anexo_registro"
-"esp"
-"subdireccion"
-"gerencia"
-"plaza"
-"categoria"
-"clasificacion"
-"grupo_plaza"
-"jornada"
-"rol_grupo"
-"T_E_O"
-"T_E_A"
-"posicion"
-"centro_gestor"
-"centro_costo" 
-"motivo_vacante"
-"motivo_contratacion"
-"ficha_candidato"
-"vigencia"
-"ficha_registro"
-"nombre_registro"
-"formacion_profesional"
-"situacion_contractual"
-"resultados_tecnic
+# Proyecto de Git Hub Número 1
+
+## Sistema de Control de Usuarios básico y amplio
+
+#### El sistema está hecho en laravel 8, usando autenticaciones, Eloquent ORM, AdminLTE for Laravel, domPDF, y procesos básicos
