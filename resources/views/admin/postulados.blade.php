@@ -7,9 +7,12 @@
 @stop
 
 @section('content')
-        <p class="text-center font-weight-bold">Panel Principal</p>
+        <p class="text-center font-weight-bold h6">Consultar informacion acerca de un postulado</p>
+        <section class=" my-2">
+            <x-search-control-web modelosearch="Postulate" routeshow="postulados.show"></x-search-control-web>
+        </section>
         <div class="container-fluid">
-            <x-list-postulates :listmodel="$postulates"></x-list-postulates>
+            <x-list-results :listmodel="$postulates" routeWatchMore="postulados.show" :paginacion="$paginacion"></x-list-results>
         </div>
 @stop
 

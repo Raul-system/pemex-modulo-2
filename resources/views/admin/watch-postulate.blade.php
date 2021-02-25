@@ -3,11 +3,10 @@
 @section('title', 'Area Usuaria')
 
 @section('content_header')
-    <h1 class="text-center font-weight-bold">Lista de Postulados/Candidatos de la Empresa</h1>
+    <h1 class="text-center font-weight-bold">Consultar Informacion de un Candidato/Postulado </h1>
 @stop
 
 @section('content')
-        <p class="text-center font-weight-bold">Panel Principal</p>
         <div class="container-fluid">
             <x-list-postulates-masive :listmodeluser="$postulateRegistro"></x-list-postulates-masive>
         </div>

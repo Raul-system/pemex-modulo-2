@@ -17,6 +17,9 @@ use App\Http\Controllers\ContratadosController;
 use App\Http\Controllers\ValidadosCorrectamente;
 use App\Http\Controllers\RechazadosController;
 
+use App\Http\Controllers\SearchConsultarController;
+
+
 /* Es para cuando se quiera acceder a inicio, directamente vaya a Login */
 
 Route::get('user-export', [exportexcel::class, 'export']);
@@ -55,3 +58,10 @@ Route::resource('fechas-validacion-documentos', FechasValidacionDocumentosAreas:
 /* ETAPA 3 */
 
 Route::resource('generar-reportes-empleados', GenerarReporteExcelTrabajador::class)->only(['index', 'show']);
+
+
+/* Para Realizar Busquedas entre distintas vistas y modelos */
+Route::get('/search/{modelosearch}', [SearchConsultarController::class, 'getSearchToConsulte'])->name('search.consultar');
+
+
+Route::view('resultados-busqueda', 'search.resultados-busqueda')->name('view.search');

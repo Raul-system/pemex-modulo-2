@@ -17,6 +17,7 @@ class PostuladosController extends Controller
     {
         return view('admin.postulados', [
             'postulates' => Postulate::paginate(10),
+            'paginacion' => true
         ]);
         /* return Postulate::all(); */
     }
