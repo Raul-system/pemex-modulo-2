@@ -7,12 +7,16 @@
 @stop
 
 @section('content')
-        <p class="text-center font-weight-bold h2">La Página que esta intentando buscar no se encuentra disponible o no hemos
-            encontrado resultados a su búsqueda
-        </p>
-        <section class="container d-flex justify-content-center">
-            <a href="{{ route('home.index') }}" class="btn btn-success btn-lg">Ir a Inicio</a>
-        </section>
+        <div class="bg-dark" style="height: 80vh;">
+            <div class="py-5">
+                <p class="text-center font-weight-bold h2 text-white">La Página que esta intentando buscar no se encuentra disponible o no hemos
+                    encontrado resultados a su búsqueda
+                </p>
+                <section class="container d-flex justify-content-center my-3">
+                    <a href="{{ route('home.index') }}" class="btn btn-success btn-lg text-white">Ir a Inicio</a>
+                </section>
+            </div>
+        </div>
 
 @stop
 

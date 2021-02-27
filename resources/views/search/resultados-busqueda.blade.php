@@ -8,8 +8,9 @@
 
 @section('content')
         <section class="container-fluid" title="Resultados de la Busqueda Actual">
-            <x-list-results :listmodel="$listDB" :routeWatchMore="$routeConsult" :paginacion="$paginacion"></x-list-results>
+            <x-list-results :listmodel="$listDB" :routeWatchMore="$routeConsult" :paginacion="$paginacion" textBtnMore="Ver Mas..."></x-list-results>
         </section>
+
 @stop
 
 @section('css')

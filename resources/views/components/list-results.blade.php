@@ -1,4 +1,4 @@
-@props(['listmodel', 'routeWatchMore', 'paginacion'])
+@props(['listmodel', 'routeWatchMore', 'paginacion', 'textBtnMore'])
 
 {{-- Campos a mostrar al enlistar cada postulado :
     id , nombre, ficha, plaza, boton ver mas
@@ -27,14 +27,13 @@
                                         <td>{{  $item->ficha }}</td>
                                         <td>{{  $item->plaza }}</td>
                                         <td> 
-                                            <a href="{{ route( $routeWatchMore , $item->id) }}" class="btn btn-success btn-lg">Ver mas...</a>
+                                            <a href="{{ route( $routeWatchMore , $item->id) }}" class="btn btn-success btn-md">{{ $textBtnMore }}</a>
                                         </td>
                                         </tr>
                                     @endforeach
 
                             </tbody>
                 </table>
-                        
 
 
     

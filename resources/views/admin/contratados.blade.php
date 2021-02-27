@@ -3,11 +3,10 @@
 @section('title', 'Area Usuaria')
 
 @section('content_header')
-    <h1 class="text-center font-weight-bold">Formulario de Registro</h1>
+    <h1 class="text-center font-weight-bold">Lista de los Contratados</h1>
 @stop
 
 @section('content')
-        <p class="text-center font-weight-bold">Panel Principal</p>
 @stop
 
 @section('css')

@@ -14,7 +14,6 @@ use App\Http\Controllers\exportexcel;
 
 use App\Http\Controllers\PostuladosController;
 use App\Http\Controllers\ContratadosController;
-use App\Http\Controllers\ValidadosCorrectamente;
 use App\Http\Controllers\RechazadosController;
 
 use App\Http\Controllers\SearchConsultarController;
@@ -32,7 +31,6 @@ Auth::routes();
 
 Route::resource('postulados', PostuladosController::class);
 Route::resource('contratados', ContratadosController::class);
-Route::resource('validados-correctamente', ValidadosCorrectamente::class);
 Route::resource('rechazados', RechazadosController::class);
 
 Route::resource('home', UsuariaController::class)->only(['index', 'store', 'create', 'edit']);
@@ -50,6 +48,7 @@ Route::resource('departamento-personal', PersonalController::class)->only(['inde
 
 
 Route::get('/exportar-pdf/{id}', [PDFController::class, 'PDF'])->name('pdf');
+Route::get('pdf/{departamento}/{tipo}/{archivo}', [PDFController::class, 'descargar_reporte_departamento_dinamico'])->name('descargar.reportes.pdf');
 /* Route::get('/exportar-pdf', 'PDFController@PDF')->name('export-pdf'); */
 
 /* ETAPA 2 */
@@ -61,7 +60,6 @@ Route::resource('generar-reportes-empleados', GenerarReporteExcelTrabajador::cla
 
 
 /* Para Realizar Busquedas entre distintas vistas y modelos */
-Route::get('/search/{modelosearch}', [SearchConsultarController::class, 'getSearchToConsulte'])->name('search.consultar');
-
+Route::get('search', [SearchConsultarController::class, 'getSearchToConsulte'])->name('search.consultar');
 
 Route::view('resultados-busqueda', 'search.resultados-busqueda')->name('view.search');

@@ -1,17 +1,19 @@
-<section title="Panel Principal" class="container-fluid">
+<section title="Panel Principal" class="container-fluid bg-light">
     <x-carousel-panel-admin></x-carousel-panel-admin>
-    <p class="text-center font-weight-bold h3">Sistema de Control y Gestión de Documentos</p>
+    <p class="text-center font-weight-bold h1">Sistema de Control y Gestión de Documentos</p>
     <div class="container">
+        <p class="text-center font-weight-bold h3 my-3">Posibles Errores</p>
         <p class="text-center font-weight-bold my-1">
-            El sistema fue creado con la finalidad de solucionar un problema o proporcionar ayuda en cuanto al control
-            de Usuarios, así como la implementación de un sistema de Seguridad (Autenticación de Administradores) y de también conllevar el 
-            control de registros a través de base de datos relacionales, donde mantendremos los registros y cada uno de los datos confidenciales que maneje
-            cada Departamento.
+            * Si se presenta un Error 404, no te alarmes, simplemente se debe a que una solicitud no es completado correctamente
+            pero espera, no significa que es error del sistema, si no que estas tratando de buscar o acceder a algo que no está contemplado
+            en el sistema. <strong class="text-primary">Como alternativa pulsa en el boton de Inicio, o bien consulta en el panel de control (la barra lateral izquierda) para
+                completar una solicitud de forma eficiente
+            </strong>
         </p>
          <p class="text-center font-weight-bold my-1">
-            El sistema cuenta con un panel administrativo que estará disponible en todas las páginas/ departamentos.
-            Si requiere ayuda o el sistema llega a presentar un error, favor de contactar al programador author del Sistema o buscar un especialista 
-            en desarrollo Back-End de software web.
+            * Si dado caso quieres consultar la informacion de un Candidato o Empleado, puedes ir al panel de control para visitar la Página
+            de <strong class="text-primary">Postulados</strong> o <strong class="text-primary">Candidatos</strong> y encontraras los necesario para
+            ubicar los datos de una persona.
         </p>
     </div>
 </section>

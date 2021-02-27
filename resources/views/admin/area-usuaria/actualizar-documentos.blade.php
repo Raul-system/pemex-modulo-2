@@ -43,22 +43,32 @@
             <p class="text-center font-weight-bold h3">Adjuntar Archivos del Candidato</p>
             <p class="text-center font-weight-bold h3 mt-4">Datos del Candidato</p>
         </div>
+        <section class="container row">
+            <div class="col-3">
+                <p class="text-center"> Identificador único del Postulado <strong>{{ $candidatoDocumentsUpdate->id }}</strong> </p>
+            </div>
+            <div class="col-3">
+                <p class="text-center"> Nombre: <strong>{{ $candidatoDocumentsUpdate->nombre }}</strong> </p>
+            </div>
+            <div class="col-3">
+                <p class="text-center"> Ficha: <strong>{{ $candidatoDocumentsUpdate->ficha }}</strong> </p>
+            </div>
+            <div class="col-3">
+                <p class="text-center"> Plaza: <strong>{{ $candidatoDocumentsUpdate->plaza }}</strong> </p>
+            </div>
+        </section>
         <section class="row container-fluid my-5 py-3">
             <div class="col-6">
-                <label for="id_postulado">Identificador del Candidato</label>
-            <input type="text" name="id_postulado" id="id_postulado" disabled="disabled" class="form-control" value="{{ $candidatoDocumentsUpdate->id }}">
+            <input type="hidden" name="id_postulado" id="id_postulado" class="form-control" value="{{ $candidatoDocumentsUpdate->id }}">
             </div>
             <div class="col-6">
-                <label for="nombre">Nombre del Candidato</label>
-            <input type="text" name="nombre" id="nombre" disabled="disabled" class="form-control" value="{{ $candidatoDocumentsUpdate->nombre }}">
+            <input type="hidden" name="nombre" id="nombre" class="form-control" value="{{ $candidatoDocumentsUpdate->nombre }}">
             </div>
             <div class="col-6">
-                <label for="ficha">Ficha del Candidato</label>
-            <input type="text" name="ficha" id="ficha" disabled="disabled" class="form-control" value="{{ $candidatoDocumentsUpdate->ficha }}">
+            <input type="hidden" name="ficha" id="ficha" class="form-control" value="{{ $candidatoDocumentsUpdate->ficha }}">
             </div>
             <div class="col-6">
-                <label for="plaza">Plaza del Candidato</label>
-            <input type="text" name="plaza" id="plaza" disabled="disabled" class="form-control" value="{{ $candidatoDocumentsUpdate->plaza }}">
+            <input type="hidden" name="plaza" id="plaza" class="form-control" value="{{ $candidatoDocumentsUpdate->plaza }}">
             </div>
         </section>
         <section class="row">
@@ -69,12 +79,14 @@
                 <div class="custom-file">
                         <input type="file" class="custom-file-input" id="memorandum" name="memorandum"  accept=".pdf">
                         <label class="custom-file-label" for="memorandum">Adjuntar memorandum</label>
+                        {!! $errors->first('memorandum', '<strong class="text-danger">:message</strong>') !!}
                 </div>
             </div>
              <div class="col-12 p-3">
                 <div class="custom-file">
                         <input type="file" class="custom-file-input" id="obra_determinada" name="obra_determinada"  accept=".pdf">
                         <label class="custom-file-label" for="obra_determinada">Adjuntar Obra Determinada</label>
+                        {!! $errors->first('obra_determinada', '<strong class="text-danger">:message</strong>') !!}
                 </div>
             </div>
         </section>

@@ -15,6 +15,12 @@ class CreateHumanDevelopmentsTable extends Migration
     {
         Schema::create('human_developments', function (Blueprint $table) {
             $table->id();
+            $table->string('id_postulado')->nullable();
+            $table->string('nombre')->nullable();
+            $table->string('ficha')->nullable();
+            $table->string('plaza')->nullable();
+            $table->string('url_memorandum')->nullable();
+            $table->string('url_obra_determinada')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,11 @@ class CreateRejectedCandidatesTable extends Migration
     {
         Schema::create('rejected_candidates', function (Blueprint $table) {
             $table->id();
+            $table->string('ficha')->nullable();
+            $table->string('nombre')->nullable();
+            $table->string('formacion_profesional')->nullable();
+            $table->string('situacion_contractual')->nullable();
+            $table->string('resultados_tecnicos')->nullable();
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@
 @stop
 
 @section('content')
+{{-- Panel Principal --}}
         <x-panel-admin></x-panel-admin>
 @stop
 

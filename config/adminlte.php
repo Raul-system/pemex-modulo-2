@@ -123,11 +123,6 @@ return [
                     'icon' => 'fa fa-user-plus'
                 ],
                 [
-                    'text' => 'Validados Correctamente',
-                    'route'  => 'validados-correctamente.index',
-                    'icon' => 'fa fa-check'
-                ],
-                [
                     'text'    => 'Lista Rechazados',
                     'route'     => 'rechazados.index',
                     'icon' => 'fa fa-user-times'

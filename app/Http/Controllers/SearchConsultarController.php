@@ -18,11 +18,11 @@ class SearchConsultarController extends Controller
 
     public $resultados_response;
 
-    public function getSearchToConsulte($modelosearch, Request $request)
+    public function getSearchToConsulte(Request $request)
     {
-        switch ($modelosearch) {
+        switch ($request->get('modeloSearch')) {
             case 'Postulate':
-                $this->resultados_response = Postulate::where($request->get('validationNameSearch'), 'like', '%' . $request->get('text') . '%')->paginate(10);
+                $this->resultados_response = Postulate::where($request->get('validationNameSearch'), 'like', '%' . $request->get('text') . '%')->get();
                 break;
 
                 /* default:
@@ -30,7 +30,7 @@ class SearchConsultarController extends Controller
                 break; */
         }
         return view('search.resultados-busqueda', [
-            'paginacion' => true,
+            'paginacion' => false,
             'listDB' => $this->resultados_response,
             'routeConsult' => $request->get('route_consulta'),
         ]);

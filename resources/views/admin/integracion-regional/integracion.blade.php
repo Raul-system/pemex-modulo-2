@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-        <p class="text-center font-weight-bold">Panel Principal</p>
+        <x-ver-candidato-departamento :modelouser="$candidato_informacion" departamento-storage="files_integracion_regional"></x-ver-candidato-departamento>
 @stop
 
 @section('css')
